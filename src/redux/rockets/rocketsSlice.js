@@ -36,6 +36,7 @@ const rocketsSlice = createSlice({
             }
             newRocketsArr.push(newRocket);
           });
+          console.log(newRocketsArr);
           state.rocketsArr = newRocketsArr
         })
         .addCase(getRockets.pending, (state) => {

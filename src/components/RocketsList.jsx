@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getRockets } from '../redux/rockets/rocketsSlice';
+import Rocket from './Rocket';
 
 function RocketsList() {
   const rockets = useSelector((store) => store.rockets);
@@ -13,7 +14,7 @@ function RocketsList() {
   return (
     <section>
       {rockets.rocketsArr.map((rocket)=>(
-          <h3 key={rocket.id}>{rocket.name}</h3>
+          <Rocket key={rocket.id} img={rocket.img} name={rocket.name} description={rocket.description} />
         )
       )}
     </section>
