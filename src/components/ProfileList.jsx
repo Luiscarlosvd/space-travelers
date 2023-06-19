@@ -1,6 +1,14 @@
+import FilteredList from "./FilteredList";
+import { useSelector } from "react-redux";
+
+
 function ProfileList() {
+  const missions = useSelector((store) => store.missions);
+  const filteredMissions = missions.missionsArr.filter((mission)=>mission.activeMember === true)
   return (
-    <div>ProfileList</div>
+    <section className="flex">
+      <FilteredList array={filteredMissions} title="My Missions"/>
+    </section>
   )
 }
 
