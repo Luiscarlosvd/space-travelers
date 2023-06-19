@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from "react-redux";
-import { joinMission } from "../redux/missions/missionsSlice";
+import { joinMission, leaveMission } from "../redux/missions/missionsSlice";
 
 const MemberSpan = ({ activeMember }) => {
   return activeMember ? (
@@ -25,7 +25,7 @@ function Mission({ name, desc, activeMember, id }) {
         {/* <ActionButton activeMember={activeMember} /> */}
         {
           activeMember ? (
-            <button className="px-3 py-1 rounded-md border text-red-600 border-red-600">Leave Mission</button>
+            <button className="px-3 py-1 rounded-md border text-red-600 border-red-600" onClick={() => {dispatch(leaveMission(id))}}>Leave Mission</button>
           ) : (
             <button className="px-3 py-1 rounded-md border text-gray-600 border-gray-600" onClick={() => {dispatch(joinMission(id))}}>Join Mission</button>
           )

@@ -25,6 +25,10 @@ const missionsSlice = createSlice({
     joinMission: (state, action) => {
       const missionIdx = state.missionsArr.findIndex((mission) => mission.id === action.payload);
       state.missionsArr[missionIdx].activeMember = true; 
+    },
+    leaveMission: (state, action) => {
+      const missionIdx = state.missionsArr.findIndex((mission) => mission.id === action.payload);
+      state.missionsArr[missionIdx].activeMember = false; 
     }
   },
   extraReducers: (builder) => {
@@ -53,6 +57,6 @@ const missionsSlice = createSlice({
   },
 });
 
-export const { joinMission } = missionsSlice.actions
+export const { joinMission, leaveMission } = missionsSlice.actions
 
 export default missionsSlice.reducer;
