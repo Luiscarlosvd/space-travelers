@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const MemberSpan = ({ activeMember }) => {
   return activeMember ? (
     <span className="text-xs text-white font-bold whitespace-nowrap bg-cyan-600 px-2 py-1 rounded-md">Active Member</span>
@@ -30,3 +32,18 @@ function Mission({ name, desc, dark, activeMember }) {
 }
 
 export default Mission;
+
+Mission.propTypes = {
+  name: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  dark: PropTypes.bool.isRequired,
+  activeMember: PropTypes.bool.isRequired,
+};
+
+ActionButton.propTypes = {
+  activeMember: PropTypes.bool.isRequired,
+}
+
+MemberSpan.propTypes = {
+  activeMember: PropTypes.bool.isRequired,
+}
