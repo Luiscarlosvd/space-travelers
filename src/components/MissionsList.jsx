@@ -9,12 +9,14 @@ function MissionsList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMissions());
-  }, [dispatch]);
+    if (missions.missionsArr.length === 0) {
+      dispatch(getMissions());
+    }
+  }, [dispatch, missions.missionsArr.length]);
 
   return (
     <section>
-      <table className="table-auto mx-16 border border-gray-300">
+      <table className="table-auto mx-16 border border-gray-300 mb-10">
         <thead>
           <tr>
             <th className="py-3 border border-gray-300 bg-white">Mission</th>

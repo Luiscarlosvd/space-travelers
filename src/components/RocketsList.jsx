@@ -8,8 +8,10 @@ function RocketsList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getRockets());
-  }, [dispatch]);
+    if (rockets.rocketsArr.length === 0) {
+      dispatch(getRockets());
+    }
+  }, [dispatch, rockets.rocketsArr.length]);
 
   return (
     <section>
