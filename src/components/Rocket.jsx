@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Rocket = ({ img, name, description }) => {
   return (
     <div className="flex w-11/12 m-auto gap-3 mb-8">
@@ -25,6 +27,12 @@ const Rocket = ({ img, name, description }) => {
       </div>
     </div>
   )
-}
+};
+
+Rocket.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+};
 
 export default Rocket
