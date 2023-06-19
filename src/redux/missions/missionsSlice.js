@@ -31,7 +31,8 @@ const missionsSlice = createSlice({
           let newMission = {
             id: mission.mission_id,
             name: mission.mission_name,
-            description: mission.description
+            description: mission.description,
+            activeMember: false
           }
           newArr.push(newMission)
         });
