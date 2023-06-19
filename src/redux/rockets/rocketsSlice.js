@@ -21,7 +21,11 @@ const initialState = {
 const rocketsSlice = createSlice({
     name: 'rockets',
     initialState,
-    reducers: {},
+    reducers: {
+        reserve: (state, action) => {
+            console.log(state, action);
+        },
+    },
     extraReducers: (builder) => {
       builder
         .addCase(getRockets.fulfilled, (state, action) => {
@@ -33,6 +37,7 @@ const rocketsSlice = createSlice({
               id: rocket.id,
               name: rocket.name,
               description: rocket.description,
+              reserved: false,
             }
             newRocketsArr.push(newRocket);
           });
@@ -49,4 +54,5 @@ const rocketsSlice = createSlice({
     },
   });
   
+  export const { reserve } = rocketsSlice.actions;
   export default rocketsSlice.reducer;
