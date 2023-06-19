@@ -17,19 +17,18 @@ function MissionsList() {
       <table className="table-auto mx-16 border border-gray-300">
         <thead>
           <tr>
-            <th className="py-3 border border-gray-300">Mission</th>
-            <th className="py-3 border border-gray-300">Description</th>
-            <th className="py-3 border border-gray-300">Status</th>
-            <th className="py-3 border border-gray-300"></th>
+            <th className="py-3 border border-gray-300 bg-white">Mission</th>
+            <th className="py-3 border border-gray-300 bg-white">Description</th>
+            <th className="py-3 border border-gray-300 bg-white">Status</th>
+            <th className="py-3 border border-gray-300 bg-white"></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="table-body">
           {missions.missionsArr.map((mission, idx) => (
             <Mission
               key={mission.id}
               name={mission.name}
               desc={mission.description}
-              dark={idx % 2 === 0 ? true : false}
               activeMember={mission.activeMember}
             />
           ))}

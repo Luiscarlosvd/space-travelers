@@ -16,9 +16,9 @@ const ActionButton = ({ activeMember }) => {
   )
 }
 
-function Mission({ name, desc, dark, activeMember }) {
+function Mission({ name, desc, activeMember }) {
   return (
-    <tr className={dark ? "bg-gray-200" : ""}>
+    <tr>
       <td className="px-4 py-2 border border-gray-300">{name}</td>
       <td className="text-sm px-4 py-2 border border-gray-300">{desc}</td>
       <td className="px-4 py-2 border border-gray-300">
@@ -36,7 +36,6 @@ export default Mission;
 Mission.propTypes = {
   name: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
-  dark: PropTypes.bool.isRequired,
   activeMember: PropTypes.bool.isRequired,
 };
 
