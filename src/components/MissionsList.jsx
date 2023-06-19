@@ -12,7 +12,7 @@ function MissionsList() {
     if (missions.missionsArr.length === 0) {
       dispatch(getMissions());
     }
-  }, [dispatch]);
+  }, [dispatch, missions.missionsArr.length]);
 
   return (
     <section>

@@ -11,7 +11,7 @@ function RocketsList() {
     if (rockets.rocketsArr.length === 0) {
       dispatch(getRockets());
     }
-  }, [dispatch]);
+  }, [dispatch, rockets.rocketsArr.length]);
 
   return (
     <section>
