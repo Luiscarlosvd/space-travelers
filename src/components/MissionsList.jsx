@@ -13,7 +13,10 @@ function MissionsList() {
 
   return (
     <section>
-      missions
+      {missions.missionsArr.map((mission)=>(
+          <h3 key={mission.id}>{mission.name}</h3>
+        )
+      )}
     </section>
   )
 }
