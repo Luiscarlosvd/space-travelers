@@ -14,7 +14,14 @@ function RocketsList() {
   return (
     <section>
       {rockets.rocketsArr.map((rocket)=>(
-          <Rocket key={rocket.id} img={rocket.img} name={rocket.name} description={rocket.description} />
+          <Rocket 
+            key={rocket.id}
+            id={rocket.id}
+            img={rocket.img}
+            name={rocket.name}
+            description={rocket.description}
+            reserved={rocket.reserved}
+          />
         )
       )}
     </section>
