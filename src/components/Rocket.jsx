@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveRocket } from '../redux/rockets/rocketsSlice';
 
-const Rocket = ({ img, name, description }) => {
+const Rocket = ({ img, id, name, description, reserved }) => {
+  const dispatch = useDispatch();
+
   return (
     <div className="flex w-11/12 m-auto gap-3 mb-8">
       <img className="w-60 h-48" src={img} alt="USER" />
@@ -12,18 +16,22 @@ const Rocket = ({ img, name, description }) => {
           </span>
           {description}
         </p>
-        <button 
-          type="button"
-          className="w-36 rounded-md text-lg p-2 text-white bg-blue-500"
-        >
-          Reserve Rocket
-        </button>
-        <button 
-          type="button"
-          className="w-44 rounded-md text-lg p-2 text-gray-500 border border-gray-500"
-        >
-          Cancel Reservation
-        </button>
+        {reserved ? (
+          <button 
+            type="button"
+            className="w-44 rounded-md text-lg p-2 text-gray-500 border border-gray-500"
+          >
+            Cancel Reservation
+          </button>
+        ) : (
+          <button 
+            type="button"
+            className="w-36 rounded-md text-lg p-2 text-white bg-blue-500"
+            onClick={() => dispatch(reserveRocket(id))}
+          >
+            Reserve Rocket
+          </button>
+        )}
       </div>
     </div>
   )
@@ -33,6 +41,8 @@ Rocket.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
 
 export default Rocket
