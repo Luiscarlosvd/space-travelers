@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from "react-redux";
+import { joinMission, leaveMission } from "../redux/missions/missionsSlice";
 
 const MemberSpan = ({ activeMember }) => {
   return activeMember ? (
@@ -8,24 +10,26 @@ const MemberSpan = ({ activeMember }) => {
   );
 };
 
-const ActionButton = ({ activeMember }) => {
-  return activeMember ? (
-    <button className="px-3 py-2 rounded-md border text-red-600 border-red-600">Leave Mission</button>
-  ) : (
-    <button className="px-3 py-1 rounded-md border text-gray-600 border-gray-600">Join Mission</button>
-  )
-}
+function Mission({ name, desc, activeMember, id }) {
 
-function Mission({ name, desc, dark, activeMember }) {
+  const dispatch = useDispatch();
+
   return (
-    <tr className={dark ? "bg-gray-200" : ""}>
+    <tr>
       <td className="px-4 py-2 border border-gray-300">{name}</td>
       <td className="text-sm px-4 py-2 border border-gray-300">{desc}</td>
       <td className="px-4 py-2 border border-gray-300">
         <MemberSpan activeMember={activeMember} />
       </td>
       <td className="px-4 py-2 border border-gray-300 whitespace-nowrap">
-        <ActionButton activeMember={activeMember} />
+        {/* <ActionButton activeMember={activeMember} /> */}
+        {
+          activeMember ? (
+            <button className="px-3 py-1 rounded-md border text-red-600 border-red-600" onClick={() => {dispatch(leaveMission(id))}}>Leave Mission</button>
+          ) : (
+            <button className="px-3 py-1 rounded-md border text-gray-600 border-gray-600" onClick={() => {dispatch(joinMission(id))}}>Join Mission</button>
+          )
+        }
       </td>
     </tr>
   );
@@ -36,13 +40,9 @@ export default Mission;
 Mission.propTypes = {
   name: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
-  dark: PropTypes.bool.isRequired,
   activeMember: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
 };
-
-ActionButton.propTypes = {
-  activeMember: PropTypes.bool.isRequired,
-}
 
 MemberSpan.propTypes = {
   activeMember: PropTypes.bool.isRequired,
