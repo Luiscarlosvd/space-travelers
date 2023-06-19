@@ -24,9 +24,10 @@ function MissionsList() {
           </tr>
         </thead>
         <tbody className="table-body">
-          {missions.missionsArr.map((mission, idx) => (
+          {missions.missionsArr.map((mission) => (
             <Mission
               key={mission.id}
+              id={mission.id}
               name={mission.name}
               desc={mission.description}
               activeMember={mission.activeMember}
