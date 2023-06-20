@@ -9,11 +9,12 @@ Space Travelers' Hub</b></h1>
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
+- [📗 Table of Contents](#-table-of-contents)
 - [🚀 Space Travelers ](#-space-travelers-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -55,6 +56,10 @@ The Space Travelers App is a web application that fetches data from the SpaceX A
 - Fetches a list of rockets from the SpaceX API and allows users to reserve rockets.
 - Fetches a list of missions from the SpaceX API and allows users to join or leave missions.
 - Provides a profile section that displays the list of missions the user is enrolled in and the list of rockets the user has reserved.
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> You can see the Live Demo [here.](https://space-travelers-hub-8lpe.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
