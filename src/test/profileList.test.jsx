@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
+import { describe, expect, test, beforeEach } from 'vitest'
 import configureStore from 'redux-mock-store';
 import ProfileList from '../components/ProfileList';
 
