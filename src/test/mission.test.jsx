@@ -1,6 +1,7 @@
-import { render, fireEvent } from '@testing-library/react';
+import { it, describe, expect, vi } from 'vitest'
+import { render } from '@testing-library/react';
 import Mission from '../components/Mission';
-import { vi } from 'vitest'
+
 
 vi.mock('react-redux', () => ({
   useDispatch: vi.fn(),
