@@ -31,8 +31,6 @@ const rocketsSlice = createSlice({
             state.rocketsArr = newStateReserved;
         },
         cancelReservationRocket: (state, action) => {
-            console.log(state, action);
-            console.log(state.rocketsArr);
             const newStateCancelReservation = state.rocketsArr.map(rocket => {
                 if(rocket.id !== action.payload) 
                     return rocket;
