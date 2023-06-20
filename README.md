@@ -2,37 +2,36 @@
 
 <div align="center">
   <h1><b>
-Space Travelers'</b></h1>
-  <h2>Using react & redux</h2>
+Space Travelers' Hub</b></h1>
 </div>
 
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+- [� Table of Contents](#-table-of-contents)
+- [🚀 Space Travelers ](#-space-travelers-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
 # 🚀 Space Travelers <a name="about-project"></a>
 
-The Space Travelers App is a web application that fetches data from the SpaceX API and displays a list of rockets and missions. Users can reserve rockets and join or leave missions. The app utilizes React and Redux for state management.
+The Space Travelers App is a web application that fetches data from the SpaceX API and displays a list of rockets and missions. Users can reserve rockets and join or leave missions. The app was built with React and Redux for state management.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -94,8 +93,15 @@ To run the project run this comand:
 ```sh
   npm run dev
 ```
+Note: Your default browser should be opened in this moment. (if not, click the link given on your console).
 
-your default browser should be opened in this moment. (if not, click the link given on your console)
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  npm test
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
