@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  text-decoration: underline;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(238, 238, 238);
+}
